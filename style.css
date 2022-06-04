@@ -50,21 +50,25 @@ textarea:focus {
   display: block;
   text-align: center;
   margin-top: 43px;
+  margin-bottom: 0;
 }
 .weathericon {
-  width: 380px;
+  width: 320px;
   height: auto;
   display: block;
-  margin: -65px auto -55px;
+  margin: -60px auto -50px;
 }
 .states {
-  display: block;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   margin: 0 auto;
   padding: 0;
 }
 .degree {
   display: block;
-  margin: 15px auto;
+  flex-basis: 400px;
+  margin: 15px auto 0;
   text-align: center;
   font-family: "Abel";
   font-size: 32px;
@@ -77,4 +81,37 @@ textarea:focus {
 }
 .degree a:hover {
   text-decoration: underline;
+}
+.realtime {
+  display: block;
+  margin: 0px auto;
+  text-align: center;
+  font-family: "Abel";
+  font-size: 22px;
+  color: white;
+}
+.weatherstatus {
+  display: block;
+  flex-basis: 400px;
+  margin: 0px auto 5px;
+  text-align: center;
+  font-family: "Abel";
+  font-size: 22px;
+  color: white;
+}
+.humidity {
+  text-align: center;
+  flex-basis: 50%;
+  font-family: "Abel";
+  font-size: 18px;
+  color: white;
+  margin: 10px auto;
+}
+.windspeed {
+  text-align: center;
+  flex-basis: 50%;
+  font-family: "Abel";
+  font-size: 18px;
+  color: white;
+  margin: 10px auto;
 }
