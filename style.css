@@ -57,6 +57,24 @@ textarea:focus {
   display: block;
   margin: -65px auto -55px;
 }
+.states {
+  display: block;
+  margin: 0 auto;
+  padding: 0;
+}
 .degree {
-    
+  display: block;
+  margin: 15px auto;
+  text-align: center;
+  font-family: "Abel";
+  font-size: 32px;
+  color: white;
+}
+.degree a:link,
+.degree a:visited {
+  color: white;
+  text-decoration: none;
+}
+.degree a:hover {
+  text-decoration: underline;
 }
