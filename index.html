@@ -16,7 +16,6 @@
       href="https://fonts.googleapis.com/css2?family=Abel&display=swap"
       rel="stylesheet"
     />
-
     <link rel="stylesheet" href="style.css" />
     <script
       src="https://kit.fontawesome.com/7921f0435f.js"
@@ -26,36 +25,44 @@
   <body>
     <div class="container">
       <div class="wrapper">
-        <div class="searchbar">
-          <div class="input-group mb-3 searchholder">
-            <input
-              type="text"
-              class="form-control"
-              placeholder="search city here..."
-              aria-label="search city here..."
-              aria-describedby="button-addon2"
-            />
-            <button
-              class="btn btn-outline-secondary searchbutton"
-              type="button"
-              id="button-addon2"
-            >
-              <i class="fa-solid fa-magnifying-glass-location"></i>
-            </button>
+        <form id="searchform">
+          <div class="searchbar">
+            <div class="input-group mb-3 searchholder">
+              <input
+                type="text"
+                class="form-control"
+                placeholder="search city here..."
+                aria-label="search city here..."
+                aria-describedby="button-addon2"
+              />
+              <button
+                class="btn btn-outline-secondary searchbutton"
+                type="button"
+                id="button-addon2"
+              >
+                <i class="fa-solid fa-magnifying-glass-location"></i>
+              </button>
+            </div>
           </div>
-        </div>
+        </form>
         <div class="detail">
-          <h1 class="cityname">Tehran</h1>
-          <p class="realtime">23:11 Sunday June/5/2022</p>
-          <img src="src/sun cloud mid rain.svg" class="weathericon" alt="weather icon" />
+          <h1 id="cityname" class="cityname">Tehran</h1>
+          <p id="realtime" class="realtime">23:11 Sunday June/5/2022</p>
+          <img
+            src="src/sun cloud mid rain.svg"
+            class="weathericon"
+            alt="weather icon"
+          />
           <ul class="states">
-            <li class="degree">12 <a href="">°C</a> | <a href="">°F</a></li>
-            <li class="weatherstatus">light rain</li>
-            <li class="windspeed">Wind Speed: 0.17km/h</li>
-            <li class="humidity">Humidity : 43%</li>
+            <li id="degree" class="degree">
+              12 <a href="">°C</a> | <a href="">°F</a>
+            </li>
+            <li id="weatherstatus" class="weatherstatus">light rain</li>
+            <li id="windspeed" class="windspeed">Wind Speed: 0.17km/h</li>
+            <li id="humidity" class="humidity">Humidity : 43%</li>
           </ul>
         </div>
-        <div class="weekweather"></div>
+        <!-- <div class="weekweather"></div> -->
       </div>
     </div>
     <script
@@ -63,5 +70,6 @@
       integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
       crossorigin="anonymous"
     ></script>
+    <script src="index.js"></script>
   </body>
 </html>

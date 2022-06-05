@@ -14,10 +14,8 @@ a {
 li {
   list-style-type: none;
 }
-input[type="text"],
-textarea,
-input[type="text"],
-textarea:focus {
+input[type="text"] {
+  color: white;
   background: linear-gradient(
     168.44deg,
     rgba(46, 51, 90, 0.26) 1.62%,
@@ -25,6 +23,7 @@ textarea:focus {
   );
   box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 10px;
+  border: 1px solid #4e2c8b;
 }
 .wrapper {
   width: 450px;
@@ -35,7 +34,7 @@ textarea:focus {
   border-radius: 30px;
 }
 .searchbar {
-  margin: 0 auto;
+  margin: 50px auto 0;
   display: block;
 }
 .searchholder {
@@ -49,7 +48,6 @@ textarea:focus {
   font-size: 50px;
   display: block;
   text-align: center;
-  margin-top: 43px;
   margin-bottom: 0;
 }
 .weathericon {
