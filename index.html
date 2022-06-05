@@ -35,6 +35,7 @@
                 aria-label="search city here..."
                 aria-describedby="button-addon2"
                 id="searchinput"
+                autocomplete="off"
               />
               <button
                 class="btn btn-outline-secondary searchbutton"
@@ -47,13 +48,16 @@
           </div>
         </form>
         <div class="detail">
-          <h1 id="cityname" class="cityname">Tehran</h1>
-          <p id="realtime" class="realtime">23:11 Sunday June/5/2022</p>
-          <img src="src/sunny.svg" id="weathericon" class="weathericon" alt="weather icon" />
+          <h1 id="cityname" class="cityname"></h1>
+          <p id="realtime" class="realtime"></p>
+          <img
+            src="src/sunny.svg"
+            id="weathericon"
+            class="weathericon"
+            alt="weather icon"
+          />
           <ul class="states">
-            <li id="degree" class="degree">
-              12 <a href="">°C</a> | <a href="">°F</a>
-            </li>
+            <li id="degree" class="degree"></li>
             <li id="weatherstatus" class="weatherstatus">light rain</li>
             <li id="windspeed" class="windspeed">Wind Speed: 0.17km/h</li>
             <li id="humidity" class="humidity">Humidity : 43%</li>
@@ -61,6 +65,10 @@
         </div>
         <!-- <div class="weekweather"></div> -->
       </div>
+      <p class="address">
+        <a href="https://github.com/Del-afk/weather-app">coded open-source</a>
+        with ❤️ by <a href="https://www.instagram.com/del_afk/">Del_afk</a>
+      </p>
     </div>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"

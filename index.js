@@ -2,7 +2,9 @@ const weatherApiKey = "eef545a795cae9fca6e032ee8406884a";
 
 function displaytemp(temp) {
   let weatherDegree = document.getElementById("degree");
-  weatherDegree.innerHTML = Math.round(temp);
+  //   let celicus = document.getElementById("cel");
+  //   let farenhit = document.getElementById("far");
+  weatherDegree.innerHTML = `${Math.round(temp)} °C`;
 }
 
 function displayCity(data) {
@@ -86,6 +88,7 @@ function changeCity(event) {
   let searchInput = document.getElementById("searchinput");
   let city = searchInput.value;
   callApi(city);
+  event.preventDefault();
 }
 
 function callApi(city) {
@@ -96,17 +99,24 @@ function callApi(city) {
       return response.json();
     })
     .then((data) => {
-      displaytemp(data.main.temp);
-      displayCity(data.name);
-      weatherDescription(data.weather[0].description);
-      windSpeed(data.wind.speed);
-      humidity(data.main.humidity);
-      changeImage(data.weather[0].icon);
+      if (data.cod == "404") {
+        displayCity("this city doesn't exist!");
+      } else {
+        displaytemp(data.main.temp);
+        displayCity(data.name);
+        weatherDescription(data.weather[0].description);
+        windSpeed(data.wind.speed);
+        humidity(data.main.humidity);
+        changeImage(data.weather[0].icon);
+      }
     });
 }
 
 let searchButton = document.getElementById("button-addon2");
 searchButton.addEventListener("click", changeCity);
 
+let searchForm = document.getElementById("searchform");
+searchForm.addEventListener("submit", changeCity);
+
 realTime();
-callApi("new york");
+callApi("Amsterdam");

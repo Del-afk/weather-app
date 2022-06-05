@@ -52,7 +52,7 @@ input[type="text"] {
 }
 .weathericon {
   max-width: 250px;
-  max-height: 210px;
+  height: 170px;
   display: block;
   margin: 0px auto -20px;
 }
@@ -112,4 +112,7 @@ input[type="text"] {
   font-size: 18px;
   color: white;
   margin: 10px auto;
+}
+.address {
+  text-align: center;
 }
