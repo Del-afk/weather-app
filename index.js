@@ -1,10 +1,10 @@
 const weatherApiKey = "eef545a795cae9fca6e032ee8406884a";
+let degreeState = 10;
 
 function displaytemp(temp) {
+  degreeState = temp;
   let weatherDegree = document.getElementById("degree");
-  //   let celicus = document.getElementById("cel");
-  //   let farenhit = document.getElementById("far");
-  weatherDegree.innerHTML = `${Math.round(temp)} °C`;
+  weatherDegree.innerHTML = `${Math.round(degreeState)}`;
 }
 
 function displayCity(data) {
@@ -111,6 +111,21 @@ function callApi(city) {
       }
     });
 }
+
+function changeToFarenhite(event) {
+  let farenhit = (degreeState * 9) / 5 + 32;
+  let weatherDegree = document.getElementById("degree");
+  weatherDegree.innerHTML = `${Math.round(farenhit)}`;
+}
+function backToCelicus(event) {
+  let weatherDegree = document.getElementById("degree");
+  weatherDegree.innerHTML = `${Math.round(degreeState)}`;
+}
+
+let celicus = document.getElementById("cel");
+let farenhit = document.getElementById("far");
+farenhit.addEventListener("click", changeToFarenhite);
+celicus.addEventListener("click", backToCelicus);
 
 let searchButton = document.getElementById("button-addon2");
 searchButton.addEventListener("click", changeCity);

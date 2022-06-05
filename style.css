@@ -65,15 +65,32 @@ input[type="text"] {
 }
 .degree {
   display: block;
-  flex-basis: 400px;
-  margin: 15px auto 0;
-  text-align: center;
+  flex-basis: 50%;
+  text-align: right;
+  font-family: "Abel";
+  font-size: 32px;
+  color: white;
+  margin: 0px 10px 0 -10px;
+}
+#celfar {
+  display: block;
+  flex-basis: 50%;
   font-family: "Abel";
   font-size: 32px;
   color: white;
 }
-.degree a:link,
-.degree a:visited {
+#cel,
+#far {
+  text-align: center;
+  font-family: "Abel";
+  font-size: 32px;
+  color: white;
+  cursor: pointer;
+}
+#cel a:link,
+#cel a:visited,
+#far a:link,
+#far a:visited {
   color: white;
   text-decoration: none;
 }
