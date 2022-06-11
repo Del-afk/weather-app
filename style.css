@@ -165,9 +165,9 @@ input[type="text"] {
 }
 .forcastdegree {
   position: absolute;
-  top: 25px;
-  right: 154px;
-  font-size: 30px;
+  top: 30px;
+  right: 150px;
+  font-size: 27px;
   color: white;
   font-family: "Abel";
 }
