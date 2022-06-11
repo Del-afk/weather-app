@@ -129,11 +129,11 @@ function forcastApi(lat, lon) {
       if (data.cod == "404") {
         displayCity("this city doesn't exist!");
       } else {
-        console.log(data.daily[0]);
+        console.log(data.daily);
 
-        for (let i = 0; i < 2; i++) {
+        for (let i = 0; i < 6; i++) {
           let forcastDegree = document.getElementById(`degree_d${i}`);
-          forcastDegree.innerHTML = Math.round(data.daily[i].temp.day);
+          forcastDegree.innerHTML = `${Math.round(data.daily[i].temp.day)}°`;
 
           let forcastHumidity = document.getElementById(`humidity_d${i}`);
           forcastHumidity.innerHTML = `H: ${Math.round(
@@ -147,6 +147,53 @@ function forcastApi(lat, lon) {
 
           let forcaststatus = document.getElementById(`status_d${i}`);
           forcaststatus.innerHTML = data.daily[i].weather[0].main;
+
+          let changeIcon = (icon) => {
+            let imageUrl = "src/sunny.svg";
+            if (icon == "01d") {
+              imageUrl = "src/sunny.svg";
+            } else if (icon == "02d") {
+              imageUrl = "src/sunny mid cloudy.svg";
+            } else if (icon == "03d") {
+              imageUrl = "src/cloud.svg";
+            } else if (icon == "04d") {
+              imageUrl = "src/cloud.svg";
+            } else if (icon == "09d") {
+              imageUrl = "src/sun cloud mid rain.svg";
+            } else if (icon == "10d") {
+              imageUrl = "src/sun cloud little rain.svg";
+            } else if (icon == "11d") {
+              imageUrl = "src/cloud 3 zap.svg";
+            } else if (icon == "13d") {
+              imageUrl = "src/big snow.svg";
+            } else if (icon == "50d") {
+              imageUrl = "src/mid snow fastwind.svg";
+            } else if (icon == "01n") {
+              imageUrl = "src/clearmoon.svg";
+            } else if (icon == "02n") {
+              imageUrl = "src/moon cloud fast wind.svg";
+            } else if (icon == "03n") {
+              imageUrl = "src/nightcloud.svg";
+            } else if (icon == "04n") {
+              imageUrl = "src/nightcloud.svg";
+            } else if (icon == "09n") {
+              imageUrl = "src/moon cloud mid rain.svg";
+            } else if (icon == "10n") {
+              imageUrl = "src/night rain.svg";
+            } else if (icon == "11n") {
+              imageUrl = "src/night zap.svg";
+            } else if (icon == "13n") {
+              imageUrl = "src/nightsnow.svg";
+            } else if (icon == "50n") {
+              imageUrl = "src/nightmist.svg";
+            }
+            let forcastIcon = document.getElementById(`icon_d${i}`);
+
+            forcastIcon.src = imageUrl;
+          };
+          changeIcon(data.daily[i].weather[0].icon);
+
+          console.log(new Date(data.daily[i].dt * 1000).getDay());
         }
       }
     });

@@ -158,9 +158,9 @@ input[type="text"] {
 }
 .overweather {
   position: absolute;
-  width: 160px;
-  height: 130px;
-  top: -10px;
+  width: 120px;
+  height: 120px;
+  top: -15px;
   right: -10px;
 }
 .forcastdegree {
@@ -183,7 +183,7 @@ input[type="text"] {
 .forcastwindspeed {
   position: absolute;
   top: 90px;
-  right: 125px;
+  right: 135px;
   font-size: 14px;
   color: #ebebf599;
   font-family: "Abel";
@@ -192,8 +192,8 @@ input[type="text"] {
 .forcaststatus {
   position: absolute;
   top: 90px;
-  right: 50px;
-  font-size: 14px;
+  right: 35px;
+  font-size: 19px;
   color: #ebebf599;
   font-family: "Abel";
   margin: 0;
