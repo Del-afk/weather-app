@@ -66,7 +66,7 @@ input[type="text"] {
 }
 .degree {
   display: block;
-  flex-basis: 50%;
+  flex-basis: 46%;
   text-align: right;
   font-family: "Abel";
   font-size: 32px;

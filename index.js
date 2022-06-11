@@ -133,7 +133,7 @@ function forcastApi(lat, lon) {
 
         for (let i = 0; i < 6; i++) {
           let forcastDegree = document.getElementById(`degree_d${i}`);
-          forcastDegree.innerHTML = `${Math.round(data.daily[i].temp.day)}°`;
+          forcastDegree.innerHTML = `${Math.round(data.daily[i].temp.day)}°C`;
 
           let forcastHumidity = document.getElementById(`humidity_d${i}`);
           forcastHumidity.innerHTML = `H: ${Math.round(
