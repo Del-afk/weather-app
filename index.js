@@ -193,7 +193,19 @@ function forcastApi(lat, lon) {
           };
           changeIcon(data.daily[i].weather[0].icon);
 
-          console.log(new Date(data.daily[i].dt * 1000).getDay());
+          // console.log(new Date(data.daily[i].dt * 1000).getDay());
+          let dayNumber = new Date(data.daily[i].dt * 1000).getDay();
+          let daysInWeek = [
+            "Sunday",
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+          ];
+          let forcastDayName = document.getElementById(`name_d${i}`);
+          forcastDayName.innerHTML = daysInWeek[dayNumber];
         }
       }
     });

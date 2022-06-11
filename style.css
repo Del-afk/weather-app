@@ -165,9 +165,9 @@ input[type="text"] {
 }
 .forcastdegree {
   position: absolute;
-  top: 13px;
-  right: 147px;
-  font-size: 40px;
+  top: 25px;
+  right: 154px;
+  font-size: 30px;
   color: white;
   font-family: "Abel";
 }
@@ -200,9 +200,9 @@ input[type="text"] {
 }
 .forcastdayname {
   position: absolute;
-  top: 7px;
-  right: 106px;
-  font-size: 18px;
+  top: 9px;
+  right: 95px;
+  font-size: 15px;
   color: #ebebf599;
   font-family: "Abel";
   margin: 0;
